@@ -1,28 +1,33 @@
-.App {
-  text-align: center;
+body {
+  background: #fff !important;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.typing {
+  color: #3F3D56;
+  font-size: 5vw;
+  letter-spacing: 0.5px;
+}
+@keyframes typing-1 {
+  from {width: 0ch;border-color: #000;visibility: visible;}
+  to {width: 23ch;border-color: #000 0;visibility: visible;}
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media all and (max-width:959px) {
+  .typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    visibility: hidden;
+    font-family: 'Times New Roman', Times, serif;
+    animation: typing-1 4s steps(23);
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    width: 23ch;
+  } 
 }

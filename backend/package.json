@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start:dev": "nodemon app.js",
+    "react": "npm start --prefix ../frontend",
+    "dev": "npm-run-all -p -r start:dev react"
+  },
+  "author": "Vidhan Shah",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.4",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.6",
+    "npm-run-all": "^4.1.5"
+  }
+}
