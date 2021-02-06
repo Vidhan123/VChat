@@ -28,3 +28,18 @@ exports.getInfo = async (req, res) => {
     console.log(err);
   }
 };
+
+exports.allUsers = async (req, res) => {
+  const users = await User.find({});
+  res.json(users);
+};
+
+exports.deleteAccount = async (req, res) => {
+  try {
+    const { email } = req.body;
+    const resp = await User.deleteOne({ email: email });
+    res.json(resp);
+  } catch (err) {
+    console.log(err);
+  }
+}; 

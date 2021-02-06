@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion';
 import './App.css';
 import useAuth from './Components/useAuth';
 import Chat from './Components/Chat/Chat';
@@ -14,16 +15,11 @@ function App() {
   return (
     <div>
       <Router>
-        {/* 
-        <Link to="/">Home</Link>
-        <Link to="/status">Status</Link>
-        <Link to="/posts">Posts</Link>
-        <Link to="/chat">Chat</Link> 
-        */}
         <Switch>
           <ProtectedRoutes path="/chat"><Chat /></ProtectedRoutes>
+          <ProtectedRoutes exact path="/chat/:chatId"><Chat /></ProtectedRoutes>
+          <ProtectedRoutes path="/chat/group/:grpId"><Chat /></ProtectedRoutes>
           <ProtectedRoutes path="/posts"><Posts /></ProtectedRoutes>
-          <ProtectedRoutes path="/status"><Status /></ProtectedRoutes>
           <Route exact path="/"><Home /></Route>
           <Route path="*"><NotFound /></Route>
         </Switch>

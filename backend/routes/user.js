@@ -20,6 +20,11 @@ userRouter
   
 userRouter
   .route('/userinfo')
+  .get(User.allUsers)
   .post(User.getInfo);
+
+userRouter
+  .route('/deleteAccount')
+  .post(User.deleteAccount);
 
 module.exports = userRouter;
