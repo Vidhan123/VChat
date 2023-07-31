@@ -11,7 +11,7 @@ const hostname = process.env.HOST || 'localhost';
 
 const port = process.env.PORT || 9000;
 
-const DBUrl = process.env.DB_CONNECTION_URL || 'mongodb+srv://Vidhan:Vidhan@mongodbatlas017@cluster0.1jszg.mongodb.net/VChat';
+const DBUrl = process.env.DB_CONNECTION_URL';
 
 module.exports = {
   hostname,
